@@ -263,16 +263,6 @@ Existem grafos direcionados (com sentido) e não direcionados (conexões livres)
 
 ---
 
-## 📌 Conclusão e Material Extra
-
-Você agora tem uma base sólida de estruturas de dados! Continue praticando, experimente e, principalmente, **pense como um programador**.
-
-**Recursos extras:**
-
-* Visualgo: visualização de estruturas → [https://visualgo.net](https://visualgo.net)
-* Estruturas em Python → [https://docs.python.org/pt-br/3/tutorial/datastructures.html](https://docs.python.org/pt-br/3/tutorial/datastructures.html)
-* Curso gratuito de Estrutura de Dados no YouTube (ex: Curso em Vídeo)
-
 Obrigado por ler! 🚀
 
 **Autor: Lucas Lima**
