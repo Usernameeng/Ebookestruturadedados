@@ -1,3 +1,14 @@
+![1](https://github.com/user-attachments/assets/e871f92f-750f-4c67-a67f-f7a7fd400629)
+
+![2](https://github.com/user-attachments/assets/50252ccc-a0c5-4de2-8585-deb60630dddc)  ![3](https://github.com/user-attachments/assets/268493a9-4193-48ae-a45f-2d9b93c70266)
+![4](https://github.com/user-attachments/assets/52bf96ae-4846-4978-aa6f-85237ff5d36b)
+
+
+
+
+
+
+
 ## 🧠 Introdução
 
 ### Por que aprender Estrutura de Dados?
@@ -261,6 +272,183 @@ Existem grafos direcionados (com sentido) e não direcionados (conexões livres)
 * Leia códigos open source
 * Pratique resolvendo problemas reais
 
+---
+
+## Exemplos Praticos - Codigo Python
+
+---
+
+## 🧩 Parte 1 — Fundamentos Essenciais
+
+### O que são Estruturas de Dados, afinal?
+
+Estruturas de dados são formas de **organizar, armazenar e acessar informações** de maneira eficiente dentro de um programa.
+
+Na prática, é como organizar a vida:
+
+* Uma **playlist** é uma lista de músicas (Array)
+* Sua **lista de tarefas** tem ordem de prioridade (Fila ou Pilha)
+* Um **armário** tem compartimentos para cada tipo de objeto (Hash Table)
+
+Ou seja, cada tipo de estrutura tem um formato diferente que serve para resolver um tipo de problema.
+
+---
+
+## 📦 Parte 2 — Estruturas Lineares no Dia a Dia
+
+### Arrays e Listas
+
+```python
+# Exemplo de Array (lista em Python)
+nomes = ["Ana", "Bruno", "Carlos"]
+print(nomes[0])  # Ana
+nomes.append("Daniel")
+print(nomes)
+```
+
+### Pilhas (Stacks)
+
+```python
+# Exemplo de Pilha usando lista
+pilha = []
+pilha.append("prato1")
+pilha.append("prato2")
+pilha.append("prato3")
+print(pilha.pop())  # prato3
+print(pilha)        # ['prato1', 'prato2']
+```
+
+### Filas (Queues)
+
+```python
+# Exemplo de Fila com deque
+from collections import deque
+fila = deque()
+fila.append("cliente1")
+fila.append("cliente2")
+print(fila.popleft())  # cliente1
+print(fila)            # deque(['cliente2'])
+```
+
+### Listas Ligadas
+
+```python
+# Exemplo básico de Lista Ligada
+class No:
+    def __init__(self, dado):
+        self.dado = dado
+        self.proximo = None
+
+no1 = No("A")
+no2 = No("B")
+no3 = No("C")
+no1.proximo = no2
+no2.proximo = no3
+
+# Percorrer lista
+atual = no1
+while atual:
+    print(atual.dado)
+    atual = atual.proximo
+```
+
+---
+
+## 🧭 Parte 3 — Organizando e Localizando com Inteligência
+
+### Dicionários (Hash Tables)
+
+```python
+# Exemplo de Dicionário
+contatos = {"Lucas": "9999-1234", "Ana": "9888-0000"}
+print(contatos["Ana"])
+contatos["João"] = "9777-3333"
+print(contatos)
+```
+
+### Conjuntos (Sets)
+
+```python
+# Exemplo de Set
+frutas = {"maçã", "banana", "maçã"}
+print(frutas)  # {'maçã', 'banana'}
+frutas.add("laranja")
+print(frutas)
+```
+
+---
+
+## 🌳 Parte 4 — Estruturas Não Lineares
+
+### Árvores (árvore binária simples)
+
+```python
+class No:
+    def __init__(self, valor):
+        self.valor = valor
+        self.esq = None
+        self.dir = None
+
+raiz = No(10)
+raiz.esq = No(5)
+raiz.dir = No(15)
+
+# Percurso em ordem
+def em_ordem(no):
+    if no:
+        em_ordem(no.esq)
+        print(no.valor)
+        em_ordem(no.dir)
+
+em_ordem(raiz)
+```
+
+### Grafos (representação com dicionário)
+
+```python
+# Grafo simples não direcionado
+grafo = {
+    "A": ["B", "C"],
+    "B": ["A", "D"],
+    "C": ["A", "D"],
+    "D": ["B", "C"]
+}
+
+# Percorrer vizinhos de A
+print("Vizinhos de A:", grafo["A"])
+```
+
+---
+
+## 🎮 Parte 5 — Aplicações Práticas e Mini Projetos
+
+```python
+# Simulador de fila de supermercado
+from collections import deque
+fila = deque()
+fila.append("Cliente 1")
+fila.append("Cliente 2")
+print("Atendendo:", fila.popleft())
+
+# Agenda com busca
+agenda = {"Lucas": "1111-2222", "Maria": "3333-4444"}
+nome = "Maria"
+if nome in agenda:
+    print("Número:", agenda[nome])
+
+# Navegador com botão de desfazer
+historico = []
+historico.append("Página 1")
+historico.append("Página 2")
+print("Desfazer:", historico.pop())
+
+# Organizador de tarefas com árvore (representação simples)
+tarefas = {
+    "Trabalho": ["Relatório", "Apresentação"],
+    "Casa": ["Lavar roupa", "Limpar"]
+}
+print("Tarefas do Trabalho:", tarefas["Trabalho"])
+```
 ---
 
 Obrigado por ler! 🚀
